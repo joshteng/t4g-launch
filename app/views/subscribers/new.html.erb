@@ -1,0 +1,51 @@
+<!-- Progress bar -->
+<div id="progressbar" data-perc="55">
+  <div class="bar"></div>
+  <div class="label"><span></span></div>
+</div>
+
+<!-- Wrap this content into a container that sets a default width. Progress is outside of this because it's width is 100%. -->
+<div id="container">
+
+  <!-- Logo text -->
+  <section id="logo">
+    <h1>Code For Us</h1>
+  </section>
+
+  <!-- Description text -->
+  <section id="tagline">
+    <p>offer your skills to non-profits</p>
+  </section>
+
+  <!-- Subscription form -->
+  <%= form_for @subscriber, remote: true, :html => { :id => 'subscribe', :'data-type' => 'json' } do |f| %>
+    
+    <ul id="message"></ul>
+      <%= f.text_field :name, placeholder: "Your name" %><br />
+      <%= f.email_field :email, placeholder: "Your email" %><br/>
+      <%= f.submit 'Notify me!', class: 'button' %>
+  <% end %>
+  
+  <!-- Countdown -->    
+  <section id="countdown"></section>
+
+  <!-- Twitter feed -->
+  <section id="twitter" class="tweet" style="display:none"></section>
+  
+  <!-- Social media icons -->
+  <section id="social" style="display:none">
+    <ul>
+      <li class="facebook"><a href="#" title="Be a facebook fan">Fan</a></li>
+      <li class="twitter"><a href="#" title="Follow us on twitter">Follow</a></li>
+      <li class="google"><a href="#" title="Befriend us on Google">Circle</a></li>
+      <li class="skype"><a href="#" title="Talk to us on Skype">Talk</a></li>
+      <li class="vimeo"><a href="#" title="Watch us on Vimeo">Watch</a></li>
+    </ul>
+  </section>
+  
+  <!-- Copyright message -->
+  <footer id="footer">© <?=date('Y')?> <a href="http://codeforus.com">codefor.us</a>. Made with love .</footer>
+
+</div>
+</body>
+</html>

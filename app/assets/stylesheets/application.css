@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#message{
+  color: #FFB6C1;
+  margin-bottom: 10px;
+}
